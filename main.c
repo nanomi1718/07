@@ -1,24 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
- #include <stdio.h> 
-int inc(int counter);
-
-int main(void) 
-{ 
-
-int i=10; 
-	printf("before i=%d\n", i); 
-	i=inc(i); // 함수의변환값이용 , i= 없으면 변환안됨 
-	printf("after i=%d\n", i); 
-	
-
+ #include <stdio.h>
+void f(void);
+int i;
+int main(void)
+{
+for ( i=0; i<5; i++ )
+{
+f();
 }
-int inc(int counter) 
-{ 
-	counter++; 
-	return counter; 
+return 0;
 }
-
+void f(void)
+{
+for ( i=0; i<10; i++)
+printf("#");
+}
