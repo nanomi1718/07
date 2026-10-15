@@ -1,19 +1,20 @@
 #include <stdio.h> 
+void f(void);
 
-int inc(int counter);
-
-int main(void) 
-{ 
-    int i = 10; 
-	printf("함수 호출전 i=%d\n", i); 
-	i = inc(i); // 함수의변환값이용 , i= 없으면 변환안됨 
-	printf("함수 호출후 i=%d\n", i); 
-
-}
-int inc(int counter) 
-{ 
-	counter++; 
-	return counter; 
+int main(void)
+{
+    int i;
+    for ( i=0; i<5; i++ )
+    {
+        f();
+    }
+    return 0;
 }
 
-
+void f(void)
+{
+    int i;
+    for ( i=0; i<10; i++)
+        printf("#");
+    
+}
